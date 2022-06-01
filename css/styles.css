@@ -4,6 +4,7 @@
   --secondary-title-text-color: #ffffff;
   --tertiary-title-text-color: #000000;
   --footer-title-text-color: rgba(255, 255, 255, 0.6);
+  --footer-icon-color: rgba(255, 255, 255, 0.1);
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
   --title-bg-color: #2f303a;
@@ -329,7 +330,6 @@ header .container {
   align-items: center;
   justify-content: center;
   fill: var(--social-links-color);
-  /* margin-right: 10px; */
 }
 
 .position-soc-item:not(:last-child) {
@@ -344,13 +344,8 @@ header .container {
 
 /* --------------------Clients----------------------- */
 
-.clients-title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
+.clients-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-list {
@@ -360,28 +355,33 @@ header .container {
   padding: 0;
 }
 
-.clients-item {
+.clients-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.client-link {
+  display: block;
+  padding: 16px 31px;
   border: 1px solid var(--social-links-color);
   border-radius: 4px;
-  padding: 16px 32px;
-}
-
-.clients-item:hover,
-.clients-item:focus {
-  border-color: var(--accent-color);
-}
-
-.clients-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.clients-icon {
+  color: var(--social-links-color);
   fill: var(--social-links-color);
 }
 
-.clients-icon:hover,
-.clients-icon:focus {
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
   fill: var(--accent-color);
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
 }
 
 /* --------------------Footer----------------- */
@@ -390,7 +390,16 @@ footer {
   background-color: var(--title-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+footer .container {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-block:not(:last-child) {
+  margin-right: 70px;
 }
 
 .footer-logo-first {
@@ -432,6 +441,32 @@ footer {
   font-size: 14px;
   line-height: 1.4;
   text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-item-list {
+  display: flex;
+}
+
+.footer-item-soc {
+  padding: 12px;
+  background-color: var(--footer-icon-color);
+  border-radius: 50%;
+}
+
+.footer-item-soc:hover,
+.footer-item-soc:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-item-soc:not(:last-child) {
+  margin-right: 10px;
+}
+
+.fotter-soc-icon {
+  fill: var(--primary-bg-color);
+  display: block;
 }
 
 /* ------Portfolio filter ------*/
@@ -482,6 +517,12 @@ footer {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.project-list .item:hover,
+.project-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-list .item:nth-child(3n) {
